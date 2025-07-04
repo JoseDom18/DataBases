@@ -1,10 +1,10 @@
 -- Crear de base de datos
 
-create database ganaderia
+create database ganaderia;
 
 -- Seleccionar base de datos
 
-use ganaderia
+use ganaderia;
 
 -- Crear de tablas
 
@@ -184,3 +184,14 @@ add constraint fk_ranchos_ref_ciudades foreign key (cve_ciudades) references ciu
 
 alter table ranchos
 add constraint fk_ranchos_ref_tipos_climas foreign key (cve_tipos_climas) references tipos_climas (cve_tipos_climas)
+
+
+-- Hacer modificaciones solo se puede hacer el cambio de tipo de dato
+
+/* alter table ejemplares
+alter column costo numeric */
+
+-- Borrar algun campo o constraint
+
+/* alter table ejemplares
+drop column costo */
