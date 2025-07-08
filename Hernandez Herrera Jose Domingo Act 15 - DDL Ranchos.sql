@@ -1,9 +1,16 @@
+USE master;
+GO
+
+DROP DATABASE Ranchos;
+GO
+
 -- Crear de base de datos
-create database ganaderia;
+create database Ranchos;
+GO
 
 -- Seleccionar base de datos
-use ganaderia;
-
+use Ranchos;
+GO
 -- Crear de tablas
 create table
   ejemplares (
@@ -110,7 +117,7 @@ alter table estados add constraint fk_estados_ref_regiones foreign key (cve_regi
 alter table ciudades add constraint fk_ciudades_ref_estados foreign key (cve_estados) references estados (cve_estados)
 alter table ranchos add constraint fk_ranchos_ref_ciudades foreign key (cve_ciudades) references ciudades (cve_ciudades)
 alter table ranchos add constraint fk_ranchos_ref_tipos_climas foreign key (cve_tipos_climas) references tipos_climas (cve_tipos_climas)
--- Hacer modificaciones solo se puede hacer el cambio de tipo de dato
+-- Hacer modificaciones solo se puede hacer el cambio de tipo de datos
 /* alter table ejemplares
 alter column costo numeric */
 -- Borrar algun campo o constraint
